@@ -31,7 +31,7 @@ The developer attaches a cryptographic signature to the application and submits 
 
 A developer have access to multiple feedbacks collected by S2Store. She can see the statistics e.g. number of downloads, number of updates, removals, ratings by users. She can also see any comments and feedbacks submitted by users and respond back. S2Store can collect error logs submitted by applications and display them to developer so she can fix them.
 
-A newer version of an applicaition can be submitted to the S2Store. Users of old version are notified about the update.
+A newer version of an application can be submitted to the S2Store. Users of old version are notified about the update.
 
 \subsection{Context Model Repository}
 \label{subsec:cmr}
@@ -68,13 +68,13 @@ The following listing shows how a sub-type can be derived from the basic type.
 
 \subsubsection{Context Model Repository and Convergence}
 
-The hierarchical tree structure of context models provides an additional benefit. Given a large number of developers involved in context modelling, we expect there would be a lot of duplicated effort. For e.g. multiple \emph{lamps} context models can exist from different developers or \emph{lamp1} could be of lesser quality than \emph{lamp2}.
+The hierarchical tree structure of context models provides an additional benefit. Given a large number of developers involved in context modeling, we expect there would be a lot of duplicated effort. For e.g. multiple \emph{lamps} context models can exist from different developers or \emph{lamp1} could be of lesser quality than \emph{lamp2}.
 
 The Context Model Repository is a central repository where developers can upload any context models they create. Each context model contains a globally unique identifier (guid). E.g. John can upload his context model at \texttt{/john/lamp1} and Jane can upload her context model at \texttt{/jane/lamp2}.
 
 Other developers who want to program services for lamps can search for context model definitions of lamps. They see both John's and Jane's context models and decide on one of them.
 
-With time, the number of context models increase in the CMR. Since context models link to eachother, it forms a network that can be modelled with a directed graph. We can now calculate the importance of a context model in the global CMR space by analysing the number of forward associations and backward associations one context model has from its neighbours. The calculation of rankings of context models is explained in \ref{subsec:implicit_rating}.
+With time, the number of context models increase in the CMR. Since context models link to each other, it forms a network that can be modeled with a directed graph. We can now calculate the importance of a context model in the global CMR space by analysing the number of forward associations and backward associations one context model has from its neighbours. The calculation of rankings of context models is explained in \ref{subsec:implicit_rating}.
 
 Only developers interact directly with CMR, not the users. Developers can perform the following activities with the CMR:
 
@@ -194,7 +194,7 @@ On the webpage of S2Store, users can rate any services they want. There exist di
 
 \subsubsection{Comment}
 
-Comments are a common way to express user opinion on the internet. Comments serve multipe purposes in the S2Store. Users can comment to express satisfaction, dissatisfaction, request for new features in the service, report bugs, etc. Constructive comments help developers identify bugs and improve their services \cite{pagano2013user}.
+Comments are a common way to express user opinion on the internet. Comments serve multiple purposes in the S2Store. Users can comment to express satisfaction, dissatisfaction, request for new features in the service, report bugs, etc. Constructive comments help developers identify bugs and improve their services \cite{pagano2013user}.
 
 \section*{Conclusion}
 

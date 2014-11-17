@@ -1,6 +1,6 @@
 \chapter{Evaluation}
 
-In order to investigate the dynamic behavior of the simulation, we must first calibrate the system by choosing our parameters. Most parameters have been inspired by the AppEco experiment which itself uses Apple's App Store chronological data for the callibration.
+In order to investigate the dynamic behavior of the simulation, we must first calibrate the system by choosing our parameters. Most parameters have been inspired by the AppEco experiment which itself uses Apple's App Store chronological data for the calibration.
 
 \section{Calibration}
 
@@ -22,8 +22,8 @@ We run the simulation for around 550 timesteps (550 days).
 The simulation was coded in Ruby and the graphs were drawn using Gnuplot. Ruby is not as fast as C and C++ but was chosen due to author's familiarity with the language. The simulation takes significant amount of processing time (one day to simulate 100,000 developers and 400,000 users). The simulation is thus broken down into two parts:
 
 \begin{itemize}
-  \item User vote simulation. This simulation is focussed on observing feedback of users on services.
-  \item Context model convergence simulation: This simulation is focussed on how context models are reused by developers and how they form their network.
+  \item User vote simulation. This simulation is focused on observing feedback of users on services.
+  \item Context model convergence simulation: This simulation is focused on how context models are reused by developers and how they form their network.
 \end{itemize}
 
 \section{Experiments}
@@ -96,6 +96,6 @@ After 99 timesteps, the graph was seen as in Figure: \ref{fig:result_component_r
 
 It is important for S2Store to be able to provide information about existing context models and their statistics to the developers. A developer is more likely to reuse existing context model when she finds the detail she is looking for. To see how this affects the production of context models, we simulate it in S2Eco. There are two different experiments associated with the graphs in Figure: \ref{fig:result_compare_graph_user_personality}. In the first experiment, developers  had less information. So they had equal probability to either choose existing context model or create a new one themselves. In the second experiment, developers had more information. So the chance that they would select existing context model to creating a new one was $10:1$.
 
-In the first experiment, developers contribute duplicate context models to the store. There are more context models per device with each service using its own context model. Thus, they are not portable with eachother.
+In the first experiment, developers contribute duplicate context models to the store. There are more context models per device with each service using its own context model. Thus, they are not portable with each other.
 
-In the second experiment, there are less context models per device. One context model is a clear favorite among the developers as they contribute more services to it than other context models. The group of services that are dependent on the same context model are compatible and take benefit from eachother.
+In the second experiment, there are less context models per device. One context model is a clear favorite among the developers as they contribute more services to it than other context models. The group of services that are dependent on the same context model are compatible and take benefit from each other.

@@ -1,7 +1,7 @@
 \section{Reputation Systems}
 \label{sec:reputation_systems}
 
-On the internet, we interact with a lot of strangers. People can be anonymous. It is common to see individuals identify themselves only with a nick names \cite{Resnick2000}. In these circumstances, it is hard to build trust with each other. Online trade on the internet can be compared to the market of lemons as described in \cite{Akerlof1970}. A mechanism is required that incentivises individuals to act with honest intention. Internet scale systems use \textit{Reputation Systems} to foster trust between the users. A Reputation System collects, distributes and aggregates feedback about participants' past behaviours. Reputation systems require at least three properties \cite{Resnick2000}:
+On the internet, we interact with a lot of strangers. People can be anonymous. It is common to see individuals identify themselves only with a nick names \cite{Resnick2000}. In these circumstances, it is hard to build trust with each other. Online trade on the internet can be compared to the market of lemons as described in \cite{Akerlof1970}. A mechanism is required that incentivises individuals to act with honest intention. Internet scale systems use \textit{Reputation Systems} to foster trust between the users. A Reputation System collects, distributes and aggregates feedback about participants' past behaviors. Reputation systems require at least three properties \cite{Resnick2000}:
 
 \begin{enumerate}
   \item Long-lived entities that inspire an expectation of future interaction;
@@ -26,7 +26,7 @@ Reputation system for users also span beyond auction and e-commerce systems. QnA
 
 Sites with \textit{follow} feature allow users to subscribe to the activities of other users. These systems build a directed graph structure. Each node is a user. Incoming vertices show people following the user while outgoing vertices show who she is following. Reputation is considered higher if she has high number of followers. In twitter.com, higher reputation means more people listen or like the users' posts. In github.com, higher reputation means more people are interested in the users' code contributions.
 
-Reputation system for users portray a characteristic of a user. Political scientist Robert Axelrod calls this the ``Shadow of the future'' \cite{Axelrod1984}. An expectation that people will consider one another's pasts in future interactions constrains behaviour in the present.
+Reputation system for users portray a characteristic of a user. Political scientist Robert Axelrod calls this the ``Shadow of the future'' \cite{Axelrod1984}. An expectation that people will consider one another's pasts in future interactions constrains behavior in the present.
 
 \subsection{Reputation Systems for entities}
 
@@ -67,7 +67,7 @@ A Reputation System is analyzed by breaking it down into the following building 
 
 \subsubsection{Claim}
 
-A claim is an assertion of quality that a \textit{source} makes about a \textit{target}. Claims can be \textit{explicit} (a direct statement of quality by the source, e.g. ranking of apps by users) or \textit{implicit} (derived from other actions of the source towards the target, e.g. computing popularity by number of downloads of an app). Claims can also be a) qualitative type or b) quantitive type. Qualitative claims attempt to describe the quality of a reputable object, e.g. ``this is an exceptional restaurant'' or ``this app has beautiful color combination''. They could be expressed by text or pictorial reviews. Quantitative claims are measurable. They are easier to implement computationally and conceptually. Quantitave claims can be collected as \textit{Normalized Values} (expressed within the range of 0.0 to 1.0), \textit{Rank Values} (a rank is a unique positive number given to a set of items, e.g. an order of top 100 apps based on page views) or \textit{Scalar Values} (a number assigned to the reputable item as a grade, usually between upper and lower limits, e.g. rating movies in the imdb between 1 and 10).
+A claim is an assertion of quality that a \textit{source} makes about a \textit{target}. Claims can be \textit{explicit} (a direct statement of quality by the source, e.g. ranking of apps by users) or \textit{implicit} (derived from other actions of the source towards the target, e.g. computing popularity by number of downloads of an app). Claims can also be a) qualitative type or b) quantitative type. Qualitative claims attempt to describe the quality of a reputable object, e.g. ``this is an exceptional restaurant'' or ``this app has beautiful color combination''. They could be expressed by text or pictorial reviews. Quantitative claims are measurable. They are easier to implement computationally and conceptually. Quantitave claims can be collected as \textit{Normalized Values} (expressed within the range of 0.0 to 1.0), \textit{Rank Values} (a rank is a unique positive number given to a set of items, e.g. an order of top 100 apps based on page views) or \textit{Scalar Values} (a number assigned to the reputable item as a grade, usually between upper and lower limits, e.g. rating movies in the imdb between 1 and 10).
 
 \subsubsection{Processes that compute the reputation}
 
@@ -111,7 +111,7 @@ Ratings model are used to get an explicit opinion about a reputable item. The up
 
 \subsubsection{Reviews}
 
-A review is a collection of ratings on different facets for a repuatble item. It also contains a text based freeform opinion.
+A review is a collection of ratings on different facets for a reputable item. It also contains a text based freeform opinion.
 
 \begin{figure}[!htb]
   \centering
@@ -122,7 +122,7 @@ A review is a collection of ratings on different facets for a repuatble item. It
 
 \subsubsection{Points}
 
-Points are awarded to users based on their activity on the platform. If points are awarded properly, it encourages people to engage more on the platform, e.g. Stackoverflow awards users with points and badges for correctly answering questions. Please enage more for reputation.
+Points are awarded to users based on their activity on the platform. If points are awarded properly, it encourages people to engage more on the platform, e.g. Stackoverflow awards users with points and badges for correctly answering questions. Please engage more for reputation.
 
 \begin{figure}[!htb]
   \centering
@@ -172,4 +172,4 @@ According to eq \ref{eq:appaware_b}, the acceptance rate is based on the most re
 
 \subsection*{In context of S2Store}
 
-The AppAware experiment from \cite{girardello2010explicit} shows good corelation between explicit rankings taken from Google's PlayStore and the collected implicit rankings. Therefore, eq \ref{eq:appaware_a} and \ref{eq:appaware_b} can be also used in S2Store. S2Store can track with the permission of user, when a new service is installed, uninstalled or updated and infer an implicit rating that can be combined with explicit rating to generate an aggregate reputation for services.
+The AppAware experiment from \cite{girardello2010explicit} shows good correlation between explicit rankings taken from Google's PlayStore and the collected implicit rankings. Therefore, eq \ref{eq:appaware_a} and \ref{eq:appaware_b} can be also used in S2Store. S2Store can track with the permission of user, when a new service is installed, uninstalled or updated and infer an implicit rating that can be combined with explicit rating to generate an aggregate reputation for services.

@@ -3,7 +3,7 @@
 
 An ecosystem has a lot of moving parts and dynamic relationship between the actors inside the ecosystem \cite{Jansen}. One of the ways of studying such relationships is through simulation \cite{castiglione2006agent}.
 
-Lim and Bentley did a comparative analysis of success of different strategies for developers while developing apps for a mobile app store \cite{lim2012successful}. They created a simulation of mobile app store ecosystems called AppEco. In AppEco, developer agents build and upload apps to the app store; user agents browse the store and download the apps \cite{lim2012successful}. They callibrate AppEco with suitable parameters that resembles the Apple's App Store and investigate the result by evaluating different developer strategies in terms of downloads received, app diversity and adoption rate.
+Lim and Bentley did a comparative analysis of success of different strategies for developers while developing apps for a mobile app store \cite{lim2012successful}. They created a simulation of mobile app store ecosystems called AppEco. In AppEco, developer agents build and upload apps to the app store; user agents browse the store and download the apps \cite{lim2012successful}. They calibrate AppEco with suitable parameters that resembles the Apple's App Store and investigate the result by evaluating different developer strategies in terms of downloads received, app diversity and adoption rate.
 
 We further explain the features of AppEco from \cite{lim2012successful} in the following section because they are relevant for our own simulation discussed in Chapter~\ref{chap:design}.
 
@@ -19,7 +19,7 @@ A developer agent takes $devDuration$ days to build an app and then uploads it t
 \begin{itemize}
   \item \emph{S0 Innovator} builds an app with random features each time.
   \item \emph{S1 Milker} try to milk an idea repeatedly. She makes an app and copies it with slight variations to produce many different apps.
-  \item \emph{S2 Optimiser} makes variations in own best app each time. The strategy models developers who learn from their downloads and want to improve.
+  \item \emph{S2 Optimizer} makes variations in own best app each time. The strategy models developers who learn from their downloads and want to improve.
   \item \emph{S3 Copycat} copies app from the Top App Chart. The strategy models less creative developers but who want to achieve many downloads quickly.
   \item \emph{S* Flexible} begins with a strategy S0-S3. Each developer than has a 0.99 probability to pick an app from the Top App Chart list and to change the strategy to be the same as the developer of the selected app.
 \end{itemize}
@@ -58,10 +58,10 @@ The probability that a developer will mutate an app when copying is 0.5. During 
 
 \subsubsection*{Users}
 
-A user agent in AppEco downloads apps uploaded in the app store. The behavior of a user in AppEco is modelled as following:
+A user agent in AppEco downloads apps uploaded in the app store. The behavior of a user in AppEco is modeled as following:
 
 \begin{itemize}
-  \item Each user has a preference of what features she likes in her apps. The preference is also modelled using a grid (preference grid) as shown in Figure~\ref{fig:example-grid}. User agents use different probability $P_{Pref}$.
+  \item Each user has a preference of what features she likes in her apps. The preference is also modeled using a grid (preference grid) as shown in Figure~\ref{fig:example-grid}. User agents use different probability $P_{Pref}$.
   \item Each filled cell in a preference grid represents a feature the user desires.
   \item If all the filled cells of the app grid are also filled in the preference grid of a user, the user downloads the app.
   \item A user keeps track of all the downloaded apps.
@@ -70,7 +70,7 @@ A user agent in AppEco downloads apps uploaded in the app store. The behavior of
 
 \subsection{Algorithm}
 
-The AppEco algorithm is responsible for modelling the interaction between the AppEco components mentioned in the section above. Each timestep in the algorithm represents a single day.
+The AppEco algorithm is responsible for modeling the interaction between the AppEco components mentioned in the section above. Each timestep in the algorithm represents a single day.
 
 The population of developer and user agents grow following a sigmoid curve. The sigmoid curve follows the population growth as described in ecological studies given by Eq.~\ref{eqn:appeco_population_growth} \cite{lim2012successful}.
 
@@ -147,7 +147,7 @@ They give the following results:
 
 \textbf{C2} They claim that Innovator strategy produced the diverse apps fulfilling maximum users' preference for apps \cite{lim2012successful}.
 
-\textbf{C3} They finally claim that S2 Optimiser strategy enables the developer to become more successful as they develop more apps although Copycat strategy is a winner in terms of number of downloads \cite{lim2012successful}. This is because copycats are plagiarising the work of other developers which eventually gets punished by the app store. The S2 Optimiser strategy produces an enhanced version of their apps which resembles the improvement developers make in real world by listening to user feedbacks.
+\textbf{C3} They finally claim that S2 Optimizer strategy enables the developer to become more successful as they develop more apps although Copycat strategy is a winner in terms of number of downloads \cite{lim2012successful}. This is because copycats are plagiarising the work of other developers which eventually gets punished by the app store. The S2 Optimizer strategy produces an enhanced version of their apps which resembles the improvement developers make in real world by listening to user feedbacks.
 
 Readers can refer to \cite{lim2012successful} for further interesting results from AppEco.
 
