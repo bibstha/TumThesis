@@ -1,0 +1,39 @@
+\section{Device Heterogeneity}
+\label{sec:device_heterogeneity_and_portability}
+
+\emph{Device Heterogeneity} means the availability of different varieties of devices on the market. Different hardwares have different interfaces that connect the real world with the digital world. The amount of heterogeneity in hardwares can be understood by studying their classification into two use domains.
+
+\begin{itemize}
+  \item Professional building automation domain,
+  \item Home automation domain.
+\end{itemize}
+
+\subsection*{Professional building automation domain}
+
+This domain includes hardware devices used in large industrial scale buildings to orchestrate, mechanize and aggregate data of smart devices \cite{pahl2014distributed}. The systems used are called Building Automation Systems (BASs). Smart Devices build for BAS have typically standardized interfaces. Due to this, softwares are portable with devices from multiple vendors. The number of companies that dominate the market is small. Which makes standardization possible. Some BAS controllers also provide a vendor independent management interface to remote control devices from outside e.g. Open Building Information Exchange (oBIX) and BACnet. However BAC systems are complex and expensive for home users.
+
+\subsection*{Home automation domain}
+
+Home automation is done on a smaller scale. Home users have wider variety of devices available from a lot of independent vendors. The devices are cheaper than BACs hardwares. Home automation typically use medium and low priced vendor proprietary solutions for domains such as heating, lighting, safety and security, comfort, energy management, remote management, etc.
+
+Smart devices for home automation also vary in the type of communication protocols. For e.g., X10 over Power Line Communication (PLC), CEBus over different media, LonWorks, KNX, Ethernet, X801.11, etc are some of the popular communication protocols \cite{warriach2013state}. It is also usual for vendors to lock-in the users by not publishing the specifications to their hardware interfaces or providing only proprietary device drivers. Thus the amount of standardization among different vendors is low.
+
+The assessment is that where there is standardization, there exist limited vendors that supply expensive hardwares only affordable on BACs. For general users, the affordable devices lack standardization.
+
+\subsection{Overcome heterogeneity}
+
+Standardization is a primary requirement for interoperable softwares. Different strategies to bring standardization and overcome heterogeneity is analysed in \cite{pahl2014distributed} by \emph{Heterogeneity Bridging}. In Heterogeneity Bridging, the architecture for software orchestration is broken down into three different functional layers:
+
+\begin{itemize}
+  \item In the orchestration services.
+  \item ``In the middle'' explained further in Section \ref{sec:ds2os}.
+  \item On the Smart devices.
+\end{itemize}
+
+\cite{pahl2014distributed} argues that the best layer for \emph{Heterogeneity Bridging} is the \emph{middle layer}. 
+
+The \emph{middle layer} decouples the dependency between the layer of physical hardware devices and the layer of software devices by providing the concept of hardware interface abstraction. The communication between an application and a smart device is done through abstract interfaces of the device. The abstract interfaces are vendor independent. Both orchestration services and the smart devices remain simple by avoiding coupling logic. Multiple services can use the same abstract interface to communicate with a smart device.
+
+\subsection*{Conclusion}
+
+The introduction of \emph{middle layer} and hardware interface abstraction is a viable solution to device heterogeneity.

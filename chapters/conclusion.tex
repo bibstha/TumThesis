@@ -1,0 +1,24 @@
+\chapter{Conclusion and Future Work}
+\label{chap:conclusion_and_future_work}
+
+\section*{Conclusion}
+
+In this thesis, we observed how convergence occurs for context models and services in a smart space ecosystem. We argued that significant challenges in encompassing smart devices in smart spaces can be solved by the architecture presented in DS2OS with Smart Space Store (S2Store). We created a simulation S2Eco which involves the necessary elements in a real life smart space ecosystem based on Distributed Smart Space Orchestration System (DS2OS). During simulation, developer and user agents were programmed to have different behaviors. Various parameters influenced how the S2Store presented developers with different list of latest, top services and search results. We used the voting mechanism to simulate user feedbacks.
+
+The assumptions made during the simulation were very simplified. Developer characteristics were not scientifically assigned but based on emperical reasoning. The relationships and complexity of context models were also based on reasoning rather than a scientific comparison. The algorithm used to calculate rankings was a very simple algorithm based on downloads. The choice of ranking algorithm should show significant changes in the convergence process. A real world implementation of the algorithm should combine different features like download counts, manual user voting, implicit rating based on user actions, etc which were lacking in our implementation.
+
+However, we observed that the presence of S2Store as a central point of collaboration between developers and users causes the quality of software services to grow. We also saw when developers are aware of existing popular context models contributed by other developers and reuse them, convergence occurs for context models.
+
+
+\section*{Future Work}
+
+The simulation has some limitations which we list below and suggest further development ideas for them:
+
+\begin{itemize}
+  \item User behavior simulation: In the simulation we have assumed developers to always be \emph{Innovators} during service production. More developer types like \emph{Copy Cats}, \emph{Optimizers} and \emph{Milkers} can be added.
+  \item During service creation, it selects the devices randomly from existing pool of devices. This algorithm causes the network of device, context models and services to form a random graph. It can be optimized by selecting devices that are already inside a closer circle. In real life, this means that a service is more likely to use different devices that have been used together before.
+  \item \emph{Top services list} algorithm considers only the downloads in the last four days. The algorithm can be improved by making a user aware of rankings provided by other users.
+\end{itemize}
+
+
+The Speed of simulation was slow. It took the simulation around 30 minutes to run for 600 timesteps and it increases exponentially as timesteps are increased. This included simulating service creation, upload, top lists generation, user preference matching, voting etc for above 12,000 users and 5,000 developers. To improve the simulation, we recommend the architecture be modified to take advantage of concurrency and also rewrite to C or C++.
